@@ -44,9 +44,9 @@ def export_boundaries(output, country_code, from_al, to_al):
     for lvl in range(from_al, to_al+1):
         print (f"\nExport osm boundaries lvl: {lvl}")
         output_new = output + f'_lvl-{lvl}.zip'
-        # _subproc(cliKey, output_new, country_code, lvl)
-        with ZipFile(output_new, 'r') as zipObj:
-            zipObj.extractall(output_new.replace('.zip', ''))
+        _subproc(cliKey, output_new, country_code, lvl)
+        # with ZipFile(output_new, 'r') as zipObj:
+        #     zipObj.extractall(output_new.replace('.zip', ''))
 
 
 def langs(translator, string):
